@@ -83,13 +83,15 @@ with their subscription details and whether they churned.
 ## Results
 
 | Model | ROC-AUC (CV) | PR-AUC (CV) |
-|---|---|
+|---|---|---|
 | `Logistic Regression` | 0.8459 | 0.6538 |
 | `Random Forest`       | 0.8454 | 0.6583 |
 | `Gradient Boosting`   | 0.8451 | 0.6530 |
 
-**Most influential risk factors** (via SHAP): from `python -m src.explain` 
+**Most influential risk factors** (via SHAP): from `python -m src.explain` :
+
 Top 10 Most Influential Features :
+|---|---|
 |`num__tenure_months` | 0.5961 |
 |`cat__contract_type_Two year` | 0.3189 |
 |`cat__contract_type_Month-to-month` | 0.2752 |
