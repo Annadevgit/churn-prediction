@@ -4,7 +4,7 @@ An end-to-end machine learning pipeline — from raw data to deployment — that
 the probability of customer churn, with model explainability and an estimate of
 business impact.
 
-![CI](https://github.com/Annadevgit/project/churn-prediction/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Annadevgit/churn-prediction/actions/workflows/ci.yml/badge.svg)
 
 ## Context and problem statement
 
