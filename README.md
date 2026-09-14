@@ -84,22 +84,22 @@ with their subscription details and whether they churned.
 
 | Model | ROC-AUC (CV) | PR-AUC (CV) |
 |---|---|
-| Logistic Regression | 0.8459 | 0.6538 |
-| Random Forest       | 0.8454 | 0.6583 |
-| Gradient Boosting   | 0.8451 | 0.6530 |
+| `Logistic Regression` | 0.8459 | 0.6538 |
+| `Random Forest`       | 0.8454 | 0.6583 |
+| `Gradient Boosting`   | 0.8451 | 0.6530 |
 
 **Most influential risk factors** (via SHAP): from `python -m src.explain` 
 Top 10 Most Influential Features :
-|num__tenure_months | 0.5961 |
-|cat__contract_type_Two year | 0.3189 |
-|cat__contract_type_Month-to-month | 0.2752 |
-|num__monthly_charges | 0.2734 |
-|cat__paperless_billing_Yes | 0.1879 |
-|cat__internet_service_DSL | 0.1453 |
-|cat__tenure_bucket_0-6m | 0.1295 |
-|cat__online_security_Yes | 0.1176 |
-|num__total_charges | 0.0991 |
-|cat__tenure_bucket_2-4y | 0.0986 |
+|`num__tenure_months` | 0.5961 |
+|`cat__contract_type_Two year` | 0.3189 |
+|`cat__contract_type_Month-to-month` | 0.2752 |
+|`num__monthly_charges` | 0.2734 |
+|`cat__paperless_billing_Yes` | 0.1879 |
+|`cat__internet_service_DSL` | 0.1453 |
+|`cat__tenure_bucket_0-6m` | 0.1295 |
+|`cat__online_security_Yes` | 0.1176 |
+|`num__total_charges` | 0.0991 |
+|`cat__tenure_bucket_2-4y` | 0.0986 |
 
 **Estimated business impact** (via `src/lift_chart.py`): targeting the top 20% of
 customers by risk score captures a majority of actual churners on the test set — see
