@@ -29,4 +29,4 @@ jobs:
           ruff check src/ tests/ --line-length=100 || true
 
       - name: Run tests
-        run: pytest tests/ -v
+        run: python -m pytest tests/ -v
