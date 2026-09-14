@@ -91,8 +91,9 @@ with their subscription details and whether they churned.
 **Most influential risk factors** (via SHAP): from `python -m src.explain` :
 
 Top 10 Most Influential Features :
-|---|---|
+
 |`num__tenure_months` | 0.5961 |
+|---|---|
 |`cat__contract_type_Two year` | 0.3189 |
 |`cat__contract_type_Month-to-month` | 0.2752 |
 |`num__monthly_charges` | 0.2734 |
