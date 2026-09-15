@@ -25,7 +25,7 @@ def load_or_train_model():
     try:
         return joblib.load(MODEL_PATH)
     except Exception:
-        st.warning("Réentraînement du modèle pour cet environnement, patiente quelques secondes...")
+        st.warning("Retraining the model for this environment—please wait a few seconds...")
         import subprocess, sys
         root = str(Path(__file__).resolve().parent.parent)
         subprocess.run([sys.executable, "-m", "src.rename_columns"], cwd=root, check=True)
