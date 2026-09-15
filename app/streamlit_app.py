@@ -20,14 +20,19 @@ st.write(
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "models" / "churn_pipeline.pkl"
 
-if not MODEL_PATH.exists():
-    st.error(
-        "Model not found. Run first:\n\n"
-        "```\npython -m src.generate_synthetic_data\npython -m src.train\n```"
-    )
-    st.stop()
+@st.cache_resource
+def load_or_train_model():
+    try:
+        return joblib.load(MODEL_PATH)
+    except Exception:
+        st.warning("Réentraînement du modèle pour cet environnement, patiente quelques secondes...")
+        import subprocess, sys
+        root = str(Path(__file__).resolve().parent.parent)
+        subprocess.run([sys.executable, "-m", "src.rename_columns"], cwd=root, check=True)
+        subprocess.run([sys.executable, "-m", "src.train"], cwd=root, check=True)
+        return joblib.load(MODEL_PATH)
 
-pipeline = joblib.load(MODEL_PATH)
+pipeline = load_or_train_model()
 
 col1, col2 = st.columns(2)
 
