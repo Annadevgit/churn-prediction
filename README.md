@@ -1,5 +1,7 @@
 # 📉 Customer Churn Prediction
 
+**Live demo**: https://churn-prediction-gqf6tmk8cgsbffxlqtzpsr.streamlit.app/
+
 An end-to-end machine learning pipeline — from raw data to deployment — that predicts
 the probability of customer churn, with model explainability and an estimate of
 business impact.
@@ -195,3 +197,4 @@ churn-prediction/
 ## Tech stack
 
 Python · pandas · scikit-learn · SHAP · FastAPI · Streamlit · Docker · pytest · GitHub Actions
+
