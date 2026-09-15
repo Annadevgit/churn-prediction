@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
-from features import add_business_features
+from src.features import add_business_features
 
 st.set_page_config(page_title="Churn Prediction", page_icon="📉", layout="centered")
 
