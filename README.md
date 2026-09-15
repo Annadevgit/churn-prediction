@@ -1,6 +1,7 @@
 # 📉 Customer Churn Prediction
 
 **Live demo**: https://churn-prediction-gqf6tmk8cgsbffxlqtzpsr.streamlit.app/
+**Live API docs**: https://churn-prediction-c4bt.onrender.com/docs
 
 An end-to-end machine learning pipeline — from raw data to deployment — that predicts
 the probability of customer churn, with model explainability and an estimate of
